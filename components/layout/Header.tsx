@@ -3,8 +3,8 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 
 const navigation = [
+  { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
-  { label: 'Approach', href: '#approach' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
