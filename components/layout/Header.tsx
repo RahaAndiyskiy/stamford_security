@@ -11,7 +11,7 @@ const navigation = [
 
 export default function Header() {
   return (
-    <header className="w-full bg-[#F6F5F3] overflow-hidden ">
+    <header className="sticky top-0 z-50 w-full bg-[#F6F5F3] shadow-sm shadow-black/5">
       <Container className="grid min-h-[70px] grid-cols-[auto_1fr_auto] items-center gap-8">
         <div className="flex items-center">
           <Image

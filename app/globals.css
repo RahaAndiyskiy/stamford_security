@@ -191,9 +191,9 @@
   }
 
   .industries-gallery {
-    --s: 350px;
+    --s: 450px;
     --g: 10px;
-    --f: 1.5;
+    --f: 1.25;
     display: grid;
     gap: var(--g);
     width: calc(2*var(--s) + var(--g));
@@ -201,6 +201,7 @@
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     overflow: visible;
+    transform: translateY(-5%) translateX(-10%);
   }
 
   .industries-gallery img {
@@ -216,7 +217,8 @@
     transition: width 0.35s linear, height 0.35s linear;
   }
 
-  .industries-gallery img:hover {
+  .industries-gallery img:hover,
+  .industries-gallery img.active {
     z-index: 10;
     width: calc(var(--s) * var(--f));
     height: calc(var(--s) * var(--f));
@@ -404,29 +406,32 @@
   .hero-actions-animate {
     opacity: 0;
     transform: translateY(20px);
-    animation: hero-text-fade-up 0.8s ease-out forwards;
+    will-change: transform, opacity;
+    animation: hero-text-fade-up 0.5s ease-out forwards;
   }
 
   .hero-image-animate {
     opacity: 0;
-    transform: translateX(24px) scale(1.02);
-    animation: hero-image-fade-up 1s ease-out 0.25s forwards;
+    transform: translate3d(24px, 0, 0);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    animation: hero-image-fade-up 0.55s ease-out 0.1s forwards;
   }
 
   .hero-label-animate {
-    animation-delay: 0.05s;
+    animation-delay: 0.02s;
   }
 
   .hero-heading-animate {
-    animation-delay: 0.15s;
+    animation-delay: 0.1s;
   }
 
   .hero-copy-animate {
-    animation-delay: 0.25s;
+    animation-delay: 0.18s;
   }
 
   .hero-actions-animate {
-    animation-delay: 0.35s;
+    animation-delay: 0.25s;
   }
 
   @keyframes about-image-fade-up {
@@ -471,11 +476,11 @@
   @keyframes hero-image-fade-up {
     from {
       opacity: 0;
-      transform: translateX(24px) scale(1.02);
+      transform: translate3d(24px, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateX(0) scale(1);
+      transform: translate3d(0, 0, 0);
     }
   }
 }
