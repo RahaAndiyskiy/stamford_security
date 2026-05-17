@@ -18,7 +18,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65vw]">
         <div className={`relative h-full w-full ${heroImageClass}`}>
           <Image
-            src="/HERO3.WEBP"
+            src="/HERO3.webp"
             alt="Hero background"
             fill
             className="object-cover object-right"
