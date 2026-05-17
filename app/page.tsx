@@ -3,6 +3,7 @@ import HeroSection from '@/components/sections/HeroSection'
 import AboutSection from '@/components/sections/AboutSection'
 import IndustriesSection from '@/components/sections/IndustriesSection'
 import SmoothScrollProvider from '@/components/SmoothScrollProvider'
+import Footer from '@/components/layout/Footer'
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
           <AboutSection />
           <IndustriesSection />
         </main>
+        <Footer />
       </div>
     </SmoothScrollProvider>
   )

@@ -1,0 +1,89 @@
+import { Container } from '@/components/ui/Container'
+
+export default function Footer() {
+  return (
+    <footer className="relative overflow-hidden bg-[#0E151D] text-[#EEEDEB]">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url('/Stamford Security logos-21.svg')",
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '35% 60%',
+          backgroundSize: '70%',
+        }}
+      />
+      <Container className="relative py-16">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+          <div className="space-y-8">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-[#7F7F7F]">Contact</p>
+              <h2 className="mt-4 text-3xl font-semibold text-[#EEEDEB]">Stamford Security Services</h2>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="space-y-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Email</p>
+                <a href="mailto:info@stamfordsecurity.co.uk" className="text-base text-[#EEEDEB] hover:text-slate-200">
+                  info@stamfordsecurity.co.uk
+                </a>
+              </div>
+              <div className="space-y-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Phone</p>
+                <p className="text-base text-[#EEEDEB]">+44 1344 951005</p>
+                <p className="text-sm text-[#7F7F7F]">For Quotation Only</p>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="space-y-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Opening hours</p>
+                <p className="text-base text-[#EEEDEB]">Monday — Friday: 8AM — 4PM</p>
+                <p className="text-base text-[#EEEDEB]">Saturday: 10AM — 2PM</p>
+              </div>
+              <div className="space-y-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Address</p>
+                <address className="not-italic text-base text-[#EEEDEB]">
+                  Venture House, 2 Arlington Square
+                  <br />
+                  Bracknell RG12 1WA
+                </address>
+              </div>
+            </div>
+
+            <div className="border-t border-slate-700 pt-6 text-sm text-slate-400">
+              <p>Company number 07786069</p>
+              <p className="mt-2">
+                <a href="#" className="text-[#EEEDEB] hover:text-white">
+                  GDPR Privacy Policy
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="overflow-hidden rounded-sm border border-slate-800 bg-slate-950/80 shadow-[0_24px_80px_-40px_rgba(0,0,0,0.8)]">
+              <iframe
+                className="h-[360px] w-full border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Stamford+Security+Services,+Venture+House,+2+Arlington+Square,+Bracknell+RG12+1WA&output=embed"
+                title="Stamford Security Services location map"
+              />
+            </div>
+            <div className="text-right text-sm text-[#7F7F7F]">
+              <a
+                href="https://maps.app.goo.gl/Gbs81F6UEYfLej2c9"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white"
+              >
+                Open company pin in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </footer>
+  )
+}

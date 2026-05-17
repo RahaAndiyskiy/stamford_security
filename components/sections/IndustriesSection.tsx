@@ -34,7 +34,7 @@ export default function IndustriesSection() {
                 INDUSTRIES WE SERVE
               </span>
               <h2 className="mt-4 text-4xl font-medium leading-[1.08] text-[#0E151D] sm:text-5xl max-w-[33rem]">
-                Security solutions built for your industry.
+                Security solutions built for your <span className="text-[#7F7F7F]">industry.</span>
               </h2>
               <ul className="mt-8 max-w-md space-y-3 text-[18px] leading-6 text-[#7F7F7F]">
                 {industryImages.map((item, index) => (
