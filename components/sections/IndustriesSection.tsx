@@ -34,7 +34,7 @@ export default function IndustriesSection() {
                 INDUSTRIES WE SERVE
               </span>
               <h2 className="mt-4 text-4xl font-medium leading-[1.08] text-[#0E151D] sm:text-5xl max-w-[33rem]">
-                Security solutions build for your industry.
+                Security solutions built for your industry.
               </h2>
               <ul className="mt-8 max-w-md space-y-3 text-[18px] leading-6 text-[#7F7F7F]">
                 {industryImages.map((item, index) => (
@@ -56,7 +56,7 @@ export default function IndustriesSection() {
               </p>
               <div className="mt-20 flex flex-wrap items-center gap-4">
                 <Button href="#request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[12px]">
-                  MORT SERVECES
+                  MORE SERVICES
                 </Button>
                 <Button2 href="#request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[14px]">
                   CONSULTATION
