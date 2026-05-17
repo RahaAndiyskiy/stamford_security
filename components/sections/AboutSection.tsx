@@ -11,7 +11,7 @@ export default function AboutSection() {
         <div className="grid h-[calc(100vh-160px)] w-full gap-14 lg:grid-cols-2 lg:items-end">
           <div className="relative h-full w-full overflow-hidden bg-[#E9E8E4]">
             <Image
-              src="/ABOUT_FOTO_2.WEBP"
+              src="/ABOUTFOTO2.WEBP"
               alt="About Stamford Security"
               fill
               className="object-cover"
