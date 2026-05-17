@@ -1,7 +1,7 @@
 import Header from '@/components/layout/Header'
 import HeroSection from '@/components/sections/HeroSection'
 import AboutSection from '@/components/sections/AboutSection'
-import ServicesStrip from '@/components/sections/ServicesStrip'
+import IndustriesSection from '@/components/sections/IndustriesSection'
 
 export default function HomePage() {
   return (
@@ -9,8 +9,8 @@ export default function HomePage() {
       <Header />
       <main className="flex flex-col flex-1">
         <HeroSection />
-        <ServicesStrip />
         <AboutSection />
+        <IndustriesSection />
       </main>
     </div>
   )

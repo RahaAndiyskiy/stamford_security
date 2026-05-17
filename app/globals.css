@@ -118,6 +118,180 @@
     animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
+  .button2--light::after {
+    background-color: #EEEDEB;
+  }
+
+  .button2--light:hover::after {
+    animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .service-item--gps {
+    transition: color 250ms ease;
+  }
+
+  .service-item--gps:hover {
+    color: #ffffff;
+  }
+
+  .service-item--gps:hover .gps-ring {
+    stroke: #ffffff;
+  }
+
+  .service-item--gps:hover .gps-dot {
+    animation: gps-dot-flash 1.4s ease-out infinite alternate;
+    stroke: #ff4b4b;
+  }
+
+  .service-item--video .video-icon {
+    transform-origin: center;
+  }
+
+  .service-item--video:hover .video-icon {
+    transform: rotate(-10deg);
+  }
+
+  .video-icon {
+    transform-origin: center;
+    transition: transform 300ms ease;
+  }
+
+  .video-icon .camera-record {
+    fill: #EEEDEB;
+    transition: fill 250ms ease, transform 250ms ease;
+    transform-origin: center;
+  }
+
+  .service-item--video:hover .camera-record {
+    fill: #dc2626;
+    transform: scale(1.15);
+  }
+
+  .service-item--alarm {
+    transition: color 250ms ease;
+  }
+
+  .service-item--alarm:hover {
+    color: inherit;
+  }
+
+  .service-item--alarm:hover .alarm-icon {
+    color: #b91c1c;
+    animation: alarm-pulse 0.9s ease-in-out infinite alternate;
+  }
+
+  .alarm-icon {
+    transform-origin: center;
+  }
+
+  .service-item--event:hover .event-dot--one,
+  .service-item--event:hover .event-dot--two,
+  .service-item--event:hover .event-dot--three {
+    animation: event-dot-appear 0.35s ease-out forwards;
+  }
+
+  .industries-gallery {
+    --s: 350px;
+    --g: 10px;
+    --f: 1.5;
+    display: grid;
+    gap: var(--g);
+    width: calc(2*var(--s) + var(--g));
+    aspect-ratio: 1;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    overflow: visible;
+  }
+
+  .industries-gallery img {
+    position: relative;
+    z-index: 0;
+    width: 0;
+    height: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: width 0.35s linear, height 0.35s linear;
+  }
+
+  .industries-gallery img:hover {
+    z-index: 10;
+    width: calc(var(--s) * var(--f));
+    height: calc(var(--s) * var(--f));
+  }
+
+  .service-item--event:hover .event-dot--one {
+    animation-delay: 0s;
+  }
+
+  .service-item--event:hover .event-dot--two {
+    animation-delay: 0.12s;
+  }
+
+  .service-item--event:hover .event-dot--three {
+    animation-delay: 0.24s;
+  }
+
+  .event-icon .event-dot {
+    transform-origin: center;
+  }
+
+  .event-icon .event-dot--static {
+    opacity: 1;
+    transform: scale(1);
+    fill: #EEEDEB;
+  }
+
+  .event-icon .event-dot--one,
+  .event-icon .event-dot--two,
+  .event-icon .event-dot--three {
+    opacity: 0;
+    transform: scale(0.75);
+    fill: rgba(255, 255, 255, 0.5);
+  }
+
+  @keyframes alarm-pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.18);
+    }
+  }
+
+  .gps-icon .gps-ring,
+  .gps-icon .gps-dot {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: stroke 250ms ease;
+  }
+
+  @keyframes gps-dot-flash {
+    from {
+      transform: scale(1);
+      stroke-opacity: 0.55;
+    }
+    to {
+      transform: scale(1.6);
+      stroke-opacity: 1;
+    }
+  }
+
+  @keyframes event-dot-appear {
+    from {
+      transform: scale(0.75);
+      opacity: 0;
+      fill: rgba(255, 255, 255, 0.5);
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+      fill: #b91c1c;
+    }
+  }
+
   @keyframes button2-underline {
     0% {
       transform-origin: right;
@@ -193,5 +367,115 @@
   }
   .section-divider {
     border-color: rgba(148, 163, 184, 0.2);
+  }
+
+  @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  .counter {
+    counter-reset: num var(--num);
+    animation: count 1.5s ease-out var(--count-delay, 0s) forwards;
+    display: inline-block;
+    min-width: 2ch;
+  }
+
+  .counter::after {
+    content: counter(num);
+  }
+
+  .about-image-animate {
+    opacity: 0;
+    transform: translateY(24px) scale(1.05);
+    animation: about-image-fade-up 0.8s ease-out forwards;
+  }
+
+  .about-text-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: about-text-fade-up 0.8s ease-out 0.25s forwards;
+  }
+
+  .hero-label-animate,
+  .hero-heading-animate,
+  .hero-copy-animate,
+  .hero-actions-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: hero-text-fade-up 0.8s ease-out forwards;
+  }
+
+  .hero-image-animate {
+    opacity: 0;
+    transform: translateX(24px) scale(1.02);
+    animation: hero-image-fade-up 1s ease-out 0.25s forwards;
+  }
+
+  .hero-label-animate {
+    animation-delay: 0.05s;
+  }
+
+  .hero-heading-animate {
+    animation-delay: 0.15s;
+  }
+
+  .hero-copy-animate {
+    animation-delay: 0.25s;
+  }
+
+  .hero-actions-animate {
+    animation-delay: 0.35s;
+  }
+
+  @keyframes about-image-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px) scale(1.05);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes about-text-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-text-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes count {
+    to {
+      --num: var(--count-target);
+    }
+  }
+
+  @keyframes hero-image-fade-up {
+    from {
+      opacity: 0;
+      transform: translateX(24px) scale(1.02);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
   }
 }
