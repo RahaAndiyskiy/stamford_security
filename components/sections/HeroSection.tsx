@@ -4,7 +4,7 @@ import { Button2 } from '@/components/ui/Button2'
 
 import Image from 'next/image'
 
-const HERO_ANIMATIONS_ENABLED = true
+const HERO_ANIMATIONS_ENABLED = false
 
 export default function HeroSection() {
   const heroTextClass = HERO_ANIMATIONS_ENABLED ? 'hero-label-animate' : ''
@@ -14,7 +14,7 @@ export default function HeroSection() {
   const heroImageClass = HERO_ANIMATIONS_ENABLED ? 'hero-image-animate' : ''
 
   return (
-    <section id="home" className="relative flex-1 min-h-0 w-full overflow-hidden bg-[#E9E8E4]">
+    <section id="home" className="relative h-screen w-full overflow-hidden bg-[#E9E8E4]">
       <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65vw]">
         <div className={`relative h-full w-full ${heroImageClass}`}>
           <Image
@@ -33,7 +33,7 @@ export default function HeroSection() {
         }}
       />
 
-      <Container className="relative z-10 flex min-h-full items-stretch">
+      <Container className="relative z-10 flex h-[calc(100%-160px)] items-stretch">
         <div className="h-full w-full pt-16 pb-24 lg:pt-20 lg:pb-24 lg:w-[35vw] bg-[#E9E8E4]">
           <div className="flex h-full flex-col justify-between gap-6 p-8 lg:p-11">
             <div>

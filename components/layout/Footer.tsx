@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import { Container } from '@/components/ui/Container'
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#0E151D] text-[#EEEDEB]">
+    <footer id="contacts" className="relative overflow-hidden bg-[#0E151D] text-[#EEEDEB]">
       <div
         className="pointer-events-none absolute inset-0 opacity-10"
         style={{
@@ -23,9 +24,13 @@ export default function Footer() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-3">
                 <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Email</p>
-                <a href="mailto:info@stamfordsecurity.co.uk" className="text-base text-[#EEEDEB] hover:text-slate-200">
+                <a href="mailto:info@stamfordsecurity.co.uk" className="block text-base text-[#EEEDEB] hover:text-slate-200">
                   info@stamfordsecurity.co.uk
                 </a>
+                <a href="mailto:hr@stamfordsecurity.co.uk" className="block text-base text-[#EEEDEB] hover:text-slate-200">
+                  hr@stamfordsecurity.co.uk
+                </a>
+                <p className="text-sm text-[#7F7F7F]">For Job Only</p>
               </div>
               <div className="space-y-3">
                 <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Phone</p>
@@ -53,9 +58,9 @@ export default function Footer() {
             <div className="border-t border-slate-700 pt-6 text-sm text-slate-400">
               <p>Company number 07786069</p>
               <p className="mt-2">
-                <a href="#" className="text-[#EEEDEB] hover:text-white">
+                <Link href="/gdpr" className="text-[#EEEDEB] hover:text-white">
                   GDPR Privacy Policy
-                </a>
+                </Link>
               </p>
             </div>
           </div>
