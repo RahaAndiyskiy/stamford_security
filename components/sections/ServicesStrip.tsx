@@ -112,7 +112,7 @@ const serviceIcon = (service: string) => {
 
 export default function ServicesStrip() {
   return (
-    <section id="services" aria-label="Service highlights" className="w-full bg-[#0E151D] text-[#EEEDEB]">
+    <section aria-label="Service highlights" className="w-full bg-[#0E151D] text-[#EEEDEB]">
       <Container className="flex h-[160px] items-center justify-between gap-8">
         <ul className="flex flex-1 items-center gap-20 overflow-hidden text-sm uppercase tracking-[0.25em] text-[#EEEDEB]/95 pl-8 lg:pl-11">
           {services.map((service, index) => {
@@ -135,7 +135,7 @@ export default function ServicesStrip() {
           })}
         </ul>
 
-        <Button2 href="#services" className="button2--light text-sm tracking-[0.35em] transition text-[#EEEDEB] hover:text-[#FFFFFF]">
+        <Button2 href="#industries" className="button2--light text-sm tracking-[0.35em] transition text-[#EEEDEB] hover:text-[#FFFFFF]">
           View all services
         </Button2>
       </Container>

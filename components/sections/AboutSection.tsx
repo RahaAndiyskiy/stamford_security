@@ -48,7 +48,7 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="mt-20 flex flex-wrap items-center gap-4">
-              <Button href="#request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[12px]">
+              <Button href="/about" className="h-[50px] min-w-[200px] sm:w-[250px] text-[12px]">
                 LEARN MORE ABOUT US
               </Button>
               <Button2 href="#request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[14px]">

@@ -126,6 +126,52 @@
     animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
+  .about-bg-number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18rem, 28vw, 32rem);
+    font-weight: 800;
+    letter-spacing: -0.12em;
+    line-height: 0.85;
+    color: #0E151D;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .about-panel-left,
+  .about-panel-right,
+  .about-panel-mission {
+    position: relative;
+    z-index: 10;
+  }
+
+  .about-panel-left {
+    max-width: 40rem;
+  }
+
+  .about-panel-right {
+    max-width: 36rem;
+  }
+
+  .about-panel-mission {
+    max-width: 48rem;
+  }
+
+  .reveal-initial {
+    opacity: 0.3;
+    transform: translateY(40px);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
   .service-item--gps {
     transition: color 250ms ease;
   }

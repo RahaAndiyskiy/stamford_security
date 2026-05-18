@@ -4,6 +4,7 @@ import AboutSection from '@/components/sections/AboutSection'
 import IndustriesSection from '@/components/sections/IndustriesSection'
 import SmoothScrollProvider from '@/components/SmoothScrollProvider'
 import Footer from '@/components/layout/Footer'
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton'
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
           <IndustriesSection />
         </main>
         <Footer />
+        <ScrollToTopButton />
       </div>
     </SmoothScrollProvider>
   )

@@ -14,7 +14,7 @@ export default function HeroSection() {
   const heroImageClass = HERO_ANIMATIONS_ENABLED ? 'hero-image-animate' : ''
 
   return (
-    <section className="relative flex-1 min-h-0 w-full overflow-hidden bg-[#E9E8E4]">
+    <section id="home" className="relative flex-1 min-h-0 w-full overflow-hidden bg-[#E9E8E4]">
       <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65vw]">
         <div className={`relative h-full w-full ${heroImageClass}`}>
           <Image
