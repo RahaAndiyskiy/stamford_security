@@ -55,10 +55,10 @@ export default function IndustriesSection() {
                 We deliver tailored security solutions designed to protect people, assets and operations across corporate, construction, executive and high-risk environments.
               </p>
               <div className="mt-20 flex flex-wrap items-center gap-4">
-                <Button href="#request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[12px]">
+                <Button href="/request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[12px]">
                   MORE SERVICES
                 </Button>
-                <Button2 href="#request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[14px]">
+                <Button2 href="/request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[14px]">
                   CONSULTATION
                 </Button2>
               </div>

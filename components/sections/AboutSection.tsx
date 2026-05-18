@@ -51,7 +51,7 @@ export default function AboutSection() {
               <Button href="/about" className="h-[50px] min-w-[200px] sm:w-[250px] text-[12px]">
                 LEARN MORE ABOUT US
               </Button>
-              <Button2 href="#request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[14px]">
+              <Button2 href="/request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[14px]">
                 CONSULTATION
               </Button2>
             </div>

@@ -37,7 +37,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Button href="#request" className="h-[50px] w-[280px]">
+        <Button href="/request" className="h-[50px] w-[280px]">
           Request a consultation
         </Button>
       </Container>

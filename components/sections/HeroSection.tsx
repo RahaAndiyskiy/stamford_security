@@ -49,7 +49,7 @@ export default function HeroSection() {
               </p>
             </div>
             <div className={`flex flex-wrap items-center gap-4 ${heroActionsClass}`}>
-              <Button href="#request" className="h-[60px] min-w-[220px] sm:w-[240px] text-[16px]">
+              <Button href="/request" className="h-[60px] min-w-[220px] sm:w-[240px] text-[16px]">
                 Let&apos;s talk
               </Button>
               <Button2 href="#about" className="text-sm tracking-[0.3em] transition hover:text-[#0E151D]">

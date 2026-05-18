@@ -359,6 +359,20 @@
     }
   }
 
+  @keyframes form-sway {
+    0%, 100% {
+      transform: translateY(-2px);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-form-sway {
+    animation: form-sway 2s ease-in-out infinite alternate;
+  }
+
   .button__text {
     display: inline-flex;
     align-items: center;
