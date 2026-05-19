@@ -1,7 +1,36 @@
+"use client"
+
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 import { Container } from '@/components/ui/Container'
 
 export default function Footer() {
+  const [mapVisible, setMapVisible] = useState(false)
+  const mapContainerRef = useRef<HTMLDivElement | null>(null)
+  const observerRef = useRef<IntersectionObserver | null>(null)
+
+  useEffect(() => {
+    if (mapVisible || !mapContainerRef.current) {
+      return
+    }
+
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMapVisible(true)
+          observerRef.current?.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    observerRef.current.observe(mapContainerRef.current)
+
+    return () => {
+      observerRef.current?.disconnect()
+    }
+  }, [mapVisible])
+
   return (
     <footer id="contacts" className="relative overflow-hidden bg-[#0E151D] text-[#EEEDEB]">
       <div
@@ -66,15 +95,19 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <div className="overflow-hidden rounded-sm border border-slate-800 bg-slate-950/80 shadow-[0_24px_80px_-40px_rgba(0,0,0,0.8)]">
-              <iframe
-                className="h-[360px] w-full border-0"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Stamford+Security+Services,+Venture+House,+2+Arlington+Square,+Bracknell+RG12+1WA&output=embed"
-                title="Stamford Security Services location map"
-              />
+            <div ref={mapContainerRef} className="overflow-hidden rounded-sm border border-slate-800 bg-slate-950/80 shadow-[0_24px_80px_-40px_rgba(0,0,0,0.8)]">
+              {mapVisible ? (
+                <iframe
+                  className="h-[360px] w-full border-0"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Stamford+Security+Services,+Venture+House,+2+Arlington+Square,+Bracknell+RG12+1WA&output=embed"
+                  title="Stamford Security Services location map"
+                />
+              ) : (
+                <div className="h-[360px] w-full" />
+              )}
             </div>
             <div className="text-right text-sm text-[#7F7F7F]">
               <a
