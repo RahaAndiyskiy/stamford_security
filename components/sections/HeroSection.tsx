@@ -37,7 +37,7 @@ export default function HeroSection() {
         <div className="h-full w-full pt-16 pb-24 lg:pt-20 lg:pb-24 lg:w-[35vw] bg-[#E9E8E4]">
           <div className="flex h-full flex-col justify-between gap-6 p-8 lg:p-11">
             <div>
-              <span className={`${heroTextClass} text-xs uppercase tracking-[0.25em] text-[#7F7F7F]/80`}>Stamford Security</span>
+              <span className={`${heroTextClass} text-xs uppercase tracking-[0.25em] text-[#6B6B6B]/80`}>Stamford Security</span>
               <h1 className={`${heroHeadingClass} max-w-2xl text-5xl font-medium leading-[1.05] text-[#0E151D] sm:text-5xl`}>
                 Security for
                 <br />
