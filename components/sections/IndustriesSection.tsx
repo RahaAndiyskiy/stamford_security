@@ -77,7 +77,7 @@ export default function IndustriesSection() {
               src={item.src}
               alt={item.label}
               loading="lazy"
-              fetchPriority="low"
+              decoding="async"
               onMouseEnter={() => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(null)}
               className={`industries-gallery-img ${activeIndex === index ? 'active' : ''}`}
