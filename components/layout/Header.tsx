@@ -3,6 +3,22 @@ import Link from 'next/link'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 
+function WhatsAppIcon({ className }: { className?: string }) {
+  return <img src="/WhatsApp.svg" alt="WhatsApp logo" className={className} />
+}
+
+function XIcon({ className }: { className?: string }) {
+  return <img src="/X.svg" alt="X logo" className={className} />
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988h-2.54v-2.89h2.54v-2.2c0-2.513 1.493-3.89 3.777-3.89 1.094 0 2.238.194 2.238.194v2.46h-1.26c-1.241 0-1.628.771-1.628 1.562V12h2.773l-.443 2.89h-2.33v6.99C18.343 21.128 22 16.99 22 12z" />
+    </svg>
+  )
+}
+
 const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/#about' },
@@ -37,9 +53,38 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Button href="/request" className="h-[50px] w-[280px]">
-          Request a consultation
-        </Button>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://wa.me/441344951005"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Stamford Security on WhatsApp"
+            className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200"
+          >
+            <WhatsAppIcon className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
+          </a>
+          <a
+            href="https://x.com/stamfsecurity"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Stamford Security on X"
+            className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200"
+          >
+            <XIcon className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
+          </a>
+          <a
+            href="https://www.facebook.com/StamfordSafetyServices"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Stamford Security on Facebook"
+            className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200"
+          >
+            <FacebookIcon className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
+          </a>
+          <Button href="/request" className="h-[50px] w-[280px]">
+            Request a consultation
+          </Button>
+        </div>
       </Container>
     </header>
   )
