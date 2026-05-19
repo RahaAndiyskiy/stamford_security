@@ -31,8 +31,17 @@ export default function RequestForm() {
         className="cursor-pointer"
         onClick={() => setSubmitted(false)}
       >
-        <div className="rounded-md border border-[#0E151D]/15 bg-white p-8 shadow-[0_30px_80px_-35px_rgba(14,21,29,0.08)]">
-          <div className="flex h-[420px] flex-col items-center justify-center text-center text-[#0E151D]">
+        <div className="relative overflow-hidden rounded-md border border-[#0E151D]/15 bg-white p-8 shadow-[0_30px_80px_-35px_rgba(14,21,29,0.08)]">
+          <div
+            className="pointer-events-none absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: "url('/Stamford Security logos-24.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center 50%',
+              backgroundSize: '120%',
+            }}
+          />
+          <div className="relative flex h-[420px] flex-col items-center justify-center text-center text-[#0E151D]">
             <p className="text-2xl font-semibold">Thank you for your request!</p>
             <p className="mt-4 max-w-md text-sm leading-6 text-[#0E151D]/80">
               Our specialist will contact you within 24 hours. Best regards!
