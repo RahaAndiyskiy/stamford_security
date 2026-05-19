@@ -122,6 +122,27 @@
     background-color: #EEEDEB;
   }
 
+  .input-underline {
+    position: relative;
+  }
+
+  .input-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0E151D;
+    opacity: 0;
+    transition: width 280ms ease, opacity 280ms ease;
+  }
+
+  .input-underline:focus-within::after {
+    width: 100%;
+    opacity: 1;
+  }
+
   .button2--light:hover::after {
     animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }

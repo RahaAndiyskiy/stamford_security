@@ -7,7 +7,7 @@ const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/#about' },
   { label: 'Services', href: '/#industries' },
-  { label: 'Contact', href: '/#contacts' },
+  { label: 'Contact', href: '/request' },
 ]
 
 export default function Header() {
