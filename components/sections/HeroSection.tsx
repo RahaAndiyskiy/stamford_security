@@ -18,7 +18,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65vw]">
         <div className={`relative h-full w-full ${heroImageClass}`}>
           <Image
-            src="/HERO3.webp"
+            src="/HERO_NEW.webp"
             alt="Hero background"
             fill
             className="object-cover object-right"
@@ -33,15 +33,15 @@ export default function HeroSection() {
         }}
       />
 
-      <Container className="relative z-10 flex h-[calc(100%-160px)] items-stretch">
-        <div className="h-full w-full pt-16 pb-24 lg:pt-20 lg:pb-24 lg:w-[35vw] bg-[#E9E8E4]">
-          <div className="flex h-full flex-col justify-between gap-6 p-8 lg:p-11">
-            <div>
+      <Container className="relative z-10 h-[calc(100%-160px)]">
+        <div className="h-full w-full pt-24 pb-24 lg:pt-28 lg:w-[35vw] bg-[#E9E8E4]">
+          <div className="flex h-full flex-col justify-between gap-6">
+            <div className="max-w-xl lg:max-w-[36rem]">
               <span className={`${heroTextClass} text-xs uppercase tracking-[0.25em] text-[#6B6B6B]/80`}>Stamford Security</span>
-              <h1 className={`${heroHeadingClass} max-w-2xl text-5xl font-medium leading-[1.05] text-[#0E151D] sm:text-5xl`}>
-                Security for
+              <h1 className={`${heroHeadingClass} max-w-2xl text-5xl font-medium leading-[1.05] text-[#0E151D] sm:text-7xl`}>
+                Working for
                 <br />
-                what matters <span className="text-[#7F7F7F]">most.</span>
+                your <span className="text-[#7F7F7F]">safety.</span>
               </h1>
               <div className={`${heroCopyClass} h-0.5 w-24 bg-[#0E151D]/95 mt-6`} />
               <p className={`${heroCopyClass} max-w-lg text-[28px] leading-9 text-[#7F7F7F] mt-6`}>
@@ -65,21 +65,21 @@ export default function HeroSection() {
           <div className="grid h-full w-full grid-cols-2 lg:grid-cols-4 gap-0">
             {[
               {
-                value: 20,
+                value: 15,
                 suffix: '+',
                 title: 'Years experience',
                 description: 'Over two decades of industry knowledge and proven results.',
               },
               {
-                value: 30,
+                value: 20,
                 suffix: '+',
                 title: 'Long-term clients',
                 description: 'Building lasting partnerships with businesses and organisations nationwide.',
               },
               {
-                value: 24,
-                suffix: '/7',
-                title: 'Rapid response',
+                value: 100,
+                suffix: '%',
+                title: 'Stuff',
                 description: 'Always available, always ready to respond when it matters most.',
               },
               {
