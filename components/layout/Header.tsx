@@ -32,13 +32,15 @@ export default function Header() {
     <header className="fixed top-0 left-0 z-[100] w-full bg-[#F6F5F3] shadow-sm shadow-black/5">
       <Container className="grid min-h-[70px] grid-cols-[auto_1fr_auto] items-center gap-8">
         <div className="flex items-center">
-          <Image
-            src="/Stamford Security logos-23 1.svg"
-            alt="Stamford Security logo"
-            width={720}
-            height={180}
-            className="h-[50px] w-auto overflow-visible"
-          />
+          <Link href="/" className="inline-flex items-center transition duration-200 hover:scale-95">
+            <Image
+              src="/Stamford Security logos-23 1.svg"
+              alt="Stamford Security logo"
+              width={720}
+              height={180}
+              className="h-[50px] w-auto overflow-visible"
+            />
+          </Link>
         </div>
 
         <nav aria-label="Primary navigation" className="flex justify-center">

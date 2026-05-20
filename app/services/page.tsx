@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import SmoothScrollProvider from '@/components/SmoothScrollProvider'
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton'
 import { Container } from '@/components/ui/Container'
 import { Button2 } from '@/components/ui/Button2'
 import { siteConfig } from '@/lib/siteConfig'
@@ -90,7 +91,7 @@ export default function ServicesPage() {
               return (
                 <Container key={service.title} className="overflow-hidden">
                   <div className={`grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] ${isOdd ? '' : 'lg:grid-cols-[1fr_1.2fr]'} `}>
-                    <div className={`${isOdd ? '' : 'lg:order-2'} rounded-xl overflow-hidden bg-white shadow-[0_35px_90px_-50px_rgba(14,21,29,0.22)]`}>
+                    <div className={`${isOdd ? '' : 'lg:order-2'} rounded-md overflow-hidden bg-white shadow-[0_35px_90px_-50px_rgba(14,21,29,0.22)]`}>
                       <Image
                         src={service.src}
                         alt={service.title}
@@ -140,6 +141,7 @@ export default function ServicesPage() {
         </main>
 
         <Footer />
+        <ScrollToTopButton />
       </div>
     </SmoothScrollProvider>
   )

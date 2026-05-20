@@ -25,7 +25,7 @@ export default function RequestPage() {
                   Request Consultation
                 </p>
                 <h1 className="text-4xl font-semibold leading-tight text-[#0E151D] sm:text-4xl">
-                  Start your security project with Stamford Security Services.
+                  Start your security project with Stamford Security <span className="text-[#0E151D]/65">Services.</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-md leading-6 text-[#0E151D]/65">
                   Tell us about your requirements and one of our specialists will contact you to discuss the best approach for your business, property or event.
@@ -45,15 +45,18 @@ export default function RequestPage() {
                 <div className="flex flex-wrap items-end gap-6 border-t border-[#0E151D]/10 pt-4 text-[#0E151D]">
                   <div className="grid gap-0.5 min-w-[84px]">
                     <span className="text-[1.9rem] font-semibold leading-none">20+</span>
-                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[10px]">YEARS EXPERIENCE</span>
+                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[10px]">YEARS</span>
+                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[10px]">EXPERIENCE</span>
                   </div>
                   <div className="grid gap-0.5 min-w-[72px]">
-                    <span className="text-[1.9rem] font-semibold leading-none">24/7</span>
-                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[10px]">OPERATIONAL SUPPORT</span>
+                    <span className="text-[1.9rem] font-semibold leading-none">24</span>
+                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[9px]">RESPONSE WITHIN</span>
+                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[9px]">24 HOURS</span>
                   </div>
                   <div className="grid gap-0.5 min-w-[40px]">
                     <span className="text-[1.9rem] font-semibold leading-none">UK</span>
-                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[10px]">NATIONWIDE COVERAGE</span>
+                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[10px]">NATIONWIDE</span>
+                    <span className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-[10px]">COVERAGE</span>
                   </div>
                 </div>
 
