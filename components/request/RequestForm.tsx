@@ -121,11 +121,11 @@ export default function RequestForm() {
               Select a service
             </option>
             <option value="Retail Security">Retail Security</option>
-            <option value="Body Guarding">Body Guarding</option>
+            <option value="Close Protection">Close Protection</option>
             <option value="Access Control System">Access Control System</option>
             <option value="Event Security">Event Security</option>
             <option value="Hotel Security">Hotel Security</option>
-            <option value="Construction Security">Construction Security</option>
+            <option value="Residential security">Residential security</option>
             <option value="Other">Other</option>
           </select>
         </label>

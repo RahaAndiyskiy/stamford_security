@@ -72,10 +72,6 @@ export default function Footer() {
                 <a href="mailto:info@stamfordsecurity.co.uk" className="block text-base text-[#EEEDEB] hover:text-slate-200">
                   info@stamfordsecurity.co.uk
                 </a>
-                <a href="mailto:hr@stamfordsecurity.co.uk" className="block text-base text-[#EEEDEB] hover:text-slate-200">
-                  hr@stamfordsecurity.co.uk
-                </a>
-                <p className="text-sm text-[#7F7F7F]">For Job Only</p>
               </div>
               <div className="space-y-3">
                 <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Phone</p>
@@ -87,8 +83,7 @@ export default function Footer() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="space-y-3">
                 <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Opening hours</p>
-                <p className="text-base text-[#EEEDEB]">Monday — Friday: 8AM — 4PM</p>
-                <p className="text-base text-[#EEEDEB]">Saturday: 10AM — 2PM</p>
+                <p className="text-base text-[#EEEDEB]">Monday — Friday: 9AM — 4PM</p>
               </div>
               <div className="space-y-3">
                 <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Address</p>

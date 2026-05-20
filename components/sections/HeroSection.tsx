@@ -78,9 +78,9 @@ export default function HeroSection() {
               },
               {
                 value: 100,
-                suffix: '%',
-                title: 'Stuff',
-                description: 'Always available, always ready to respond when it matters most.',
+                suffix: '+',
+                title: 'Security Staff',
+                description: 'A trusted team of 100+ security professionals delivering reliable support across every operation.',
               },
               {
                 value: 100,

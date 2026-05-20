@@ -7,8 +7,8 @@ import { Container } from '@/components/ui/Container'
 
 const industryImages = [
   { src: '/Industries/Access Control.webp', label: 'Access Control System' },
-  { src: '/Industries/BodyGarding.webp', label: 'Body Guarding' },
-  { src: '/Industries/Construction.webp', label: 'Construction Security' },
+  { src: '/Industries/BodyGarding new.webp', label: 'Close Protection' },
+  { src: '/Industries/Residental.webp', label: 'Residential security' },
   { src: '/Industries/Retail.webp', label: 'Retail Security' },
 ]
 

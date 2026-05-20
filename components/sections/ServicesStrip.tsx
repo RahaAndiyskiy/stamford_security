@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/Container'
 import { Button2 } from '@/components/ui/Button2'
 
-const services = ['GPS Monitoring', 'Video Monitoring', 'Alarm Systems', 'Event Security']
+const services = ['ACCESS CONTROL', 'Video Monitoring', 'Close Protection', 'Residential security']
 
 const GPSIcon = () => (
   <svg
@@ -58,6 +58,33 @@ const AlarmIcon = () => (
   </svg>
 )
 
+const BodyGuardIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="h-12 w-12 scale-[1.15] bodyguard-icon"
+    aria-hidden="true"
+  >
+    <g className="bodyguard-shield">
+      <path
+        d="M3 10.4167C3 7.21907 3 5.62028 3.37752 5.08241C3.75503 4.54454 5.25832 4.02996 8.26491 3.00079L8.83772 2.80472C10.405 2.26824 11.1886 2 12 2C12.8114 2 13.595 2.26824 15.1623 2.80472L15.7351 3.00079C18.7417 4.02996 20.245 4.54454 20.6225 5.08241C21 5.62028 21 7.21907 21 10.4167C21 10.8996 21 11.4234 21 11.9914C21 17.6294 16.761 20.3655 14.1014 21.5273C13.38 21.8424 13.0193 22 12 22C10.9807 22 10.62 21.8424 9.89856 21.5273C7.23896 20.3655 3 17.6294 3 11.9914C3 11.4234 3 10.8996 3 10.4167Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+    </g>
+    <g className="bodyguard-person">
+      <circle cx="12" cy="9" r="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M16 15C16 16.1046 16 17 12 17C8 17 8 16.1046 8 15C8 13.8954 9.79086 13 12 13C14.2091 13 16 13.8954 16 15Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+    </g>
+  </svg>
+)
+
 const EventIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +118,7 @@ const VideoIcon = () => (
 )
 
 const serviceIcon = (service: string) => {
-  if (service === 'GPS Monitoring') {
+  if (service === 'ACCESS CONTROL') {
     return <GPSIcon />
   }
 
@@ -99,11 +126,11 @@ const serviceIcon = (service: string) => {
     return <VideoIcon />
   }
 
-  if (service === 'Alarm Systems') {
-    return <AlarmIcon />
+  if (service === 'Close Protection') {
+    return <BodyGuardIcon />
   }
 
-  if (service === 'Event Security') {
+  if (service === 'Residential security') {
     return <EventIcon />
   }
 
@@ -120,7 +147,7 @@ export default function ServicesStrip() {
             return (
               <li
                 key={service}
-                className={`flex items-center gap-3 ${service === 'GPS Monitoring' ? 'service-item--gps' : service === 'Video Monitoring' ? 'service-item--video' : service === 'Alarm Systems' ? 'service-item--alarm' : service === 'Event Security' ? 'service-item--event' : ''}`}
+                className={`flex items-center gap-3 ${service === 'ACCESS CONTROL' ? 'service-item--gps' : service === 'Video Monitoring' ? 'service-item--video' : service === 'Close Protection' ? 'service-item--alarm' : service === 'Residential security' ? 'service-item--event' : ''}`}
               >
                 <span className="flex h-14 w-14 items-center justify-center text-current">
                   {serviceIcon(service)}
@@ -135,7 +162,7 @@ export default function ServicesStrip() {
           })}
         </ul>
 
-        <Button2 href="/services" className="button2--light text-sm tracking-[0.35em] transition text-[#EEEDEB] hover:text-[#FFFFFF]">
+        <Button2 href="#industries" className="button2--light text-sm tracking-[0.35em] transition text-[#EEEDEB] hover:text-[#FFFFFF]">
           View all services
         </Button2>
       </Container>

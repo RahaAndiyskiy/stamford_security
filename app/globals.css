@@ -247,6 +247,26 @@
     animation: alarm-pulse 0.9s ease-in-out infinite alternate;
   }
 
+  .service-item--alarm:hover .bodyguard-person,
+  .service-item--alarm:hover .bodyguard-person * {
+    stroke: #b91c1c;
+  }
+
+  .service-item--alarm:hover .bodyguard-shield {
+    transform: scale(1.08);
+  }
+
+  .bodyguard-person,
+  .bodyguard-person *,
+  .bodyguard-shield {
+    transition: all 250ms ease;
+  }
+
+  .bodyguard-shield,
+  .bodyguard-person {
+    transform-origin: center;
+  }
+
   .alarm-icon {
     transform-origin: center;
   }

@@ -8,6 +8,12 @@ import { siteConfig } from '@/lib/siteConfig'
 
 const services = [
   {
+    title: 'Security Consultation',
+    subtitle: 'ADVICE. STRATEGY. PROTECTION.',
+    description: 'Stamford Security Services provides specialist security consultation for businesses, property owners and event planners. We assess risk, design tailored protection plans and make practical recommendations that strengthen safety without disrupting daily operations.\n\nOur consultants support perimeter planning, access control, CCTV deployment, incident response and compliance with industry best practice. We focus on clear, actionable security strategies that protect people, assets and premises.\n\nEvery consultation is customised to your site and objectives, helping you make confident decisions about prevention, monitoring and emergency readiness.',
+    src: '/Industries/Consultation.webp',
+  },
+  {
     title: 'Access Control System',
     subtitle: 'CONTROL. ACCESS. PROFESSIONALISM.',
     description: 'Managing the movement of staff and visitors is essential across environments of all sizes — from corporate facilities to high-security sites where controlled access and verification are critical.\n\nStamford Security Services provides professional access control support across office buildings, university campuses, hospitals, industrial sites, warehouses and other environments where people, visitors and deliveries require active management.\n\nOur officers are selected for their professionalism, presentation and customer-focused approach, helping ensure that both public reception areas and private spaces are managed efficiently and securely.\n\nOur SIA licensed personnel are experienced in:',
@@ -21,16 +27,16 @@ const services = [
     src: '/Industries/Access Control.webp',
   },
   {
-    title: 'Body Guarding',
+    title: 'Close Protection',
     subtitle: 'PROTECTION. DISCRETION. CONFIDENCE.',
     description: 'Close protection requires trust, preparation and the ability to adapt to changing environments while maintaining complete professionalism and discretion.\n\nStamford Security Services provides close protection support for VIPs, executives, families, high-net-worth individuals and clients requiring additional security during travel, private events or within residential environments.\n\nEvery assignment is approached individually. Our personnel are selected to match the client’s specific requirements, helping create a secure environment that allows daily activities to continue with confidence and peace of mind.',
-    src: '/Industries/BodyGarding.webp',
+    src: '/Industries/BodyGarding new.webp',
   },
   {
-    title: 'Construction Security',
-    subtitle: 'FULLY INTEGRATED GUARDING AND SURVEILLANCE SERVICE',
-    description: 'We offer comprehensive construction and development security solutions for construction sites. Our construction security solutions include manned guards based at your premises, installation of CCTV cameras and fully monitored alarm systems.\n\nOur SIA licensed security guards deliver a fully integrated guarding and surveillance service for your development / construction site, including: redevelopment sites and building demolition sites.\n\nWe guarantee that we’ll provide personnel capable of dealing with any situation relating to the services listed above. We are fully committed to providing you with the very best people and unrivalled contract management.\n\nSince our formation, we have gained a reputation as a highly experienced security company with a young, energetic and forward-thinking management team. Our team is able to provide the highest level of professionalism, which other security companies often struggle to attain.',
-    src: '/Industries/Construction.webp',
+    title: 'Residential security',
+    subtitle: 'SURVEILLANCE. PROTECTION.',
+    description: 'We offer comprehensive residential security solutions for homes, estates and managed property portfolios. Our services include professionally trained security officers, CCTV installation and fully monitored alarm systems.\n\nOur SIA licensed security guards deliver a fully integrated guarding and surveillance service for residential and property sites, including gated communities, apartments and high-value homes.\n\nWe guarantee that we’ll provide personnel capable of dealing with any situation relating to the services listed above. We are fully committed to providing you with the very best people and unrivalled contract management.\n\nSince our formation, we have gained a reputation as a highly experienced security company with a young, energetic and forward-thinking management team. Our team is able to provide the highest level of professionalism, which other security companies often struggle to attain.',
+    src: '/Industries/Residental.webp',
   },
   {
     title: 'Retail Security',

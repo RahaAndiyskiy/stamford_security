@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { siteConfig } from '@/lib/siteConfig'
+import CookieConsent from '@/components/CookieConsent'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 
@@ -71,14 +72,8 @@ const jsonLD = {
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
+          opens: '09:00',
           closes: '16:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Saturday'],
-          opens: '10:00',
-          closes: '14:00',
         },
       ],
       contactPoint: [
@@ -100,6 +95,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={`${inter.className} bg-white text-slate-950`}>
         {children}
+        <CookieConsent />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }} />
       </body>
     </html>
