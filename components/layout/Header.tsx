@@ -23,8 +23,8 @@ const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/#about' },
   { label: 'Blogs', href: '/blogs' },
-  { label: 'Services', href: '/#industries' },
-  { label: 'Contact', href: '/request' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export default function Header() {

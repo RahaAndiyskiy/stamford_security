@@ -46,10 +46,15 @@ export default function CookieConsent() {
         </div>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Button2 href="#" onClick={() => saveConsent('declined')} className="px-4 py-3 text-sm tracking-[0.24em] text-[#EEEDEB] border border-[#EEEDEB]/30 hover:text-[#FFFFFF] hover:border-[#FFFFFF]">
-            Decline
-          </Button2>
           <Button
+            type="button"
+            onClick={() => saveConsent('declined')}
+            className="px-4 py-3 text-sm tracking-[0.24em] bg-transparent text-[#EEEDEB] border border-[#EEEDEB]/30 hover:text-[#FFFFFF] hover:border-[#FFFFFF]"
+          >
+            Decline
+          </Button>
+          <Button
+            type="button"
             onClick={() => saveConsent('accepted')}
             className="px-4 py-3 text-sm tracking-[0.24em] bg-transparent text-[#EEEDEB] border border-[#EEEDEB]/30 hover:bg-[#EEEDEB]/10 hover:text-[#EEEDEB]"
           >

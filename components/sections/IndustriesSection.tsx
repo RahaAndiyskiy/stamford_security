@@ -16,7 +16,8 @@ export default function IndustriesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
-    <section id="industries" className="h-screen w-full overflow-hidden bg-[#EEEDEB] text-[#0E151D]">
+    <section id="industries" className="relative scroll-mt-24 h-screen w-full overflow-hidden bg-[#EEEDEB] text-[#0E151D]">
+      <span id="services" className="absolute inset-x-0 top-0 h-0" />
       <Container className="grid h-full gap-10 pt-24 lg:grid-cols-[minmax(30rem,1fr)_minmax(32rem,1fr)] lg:pt-28">
         <div className="w-full max-w-xl lg:max-w-[36rem]">
           <div className="relative overflow-hidden">

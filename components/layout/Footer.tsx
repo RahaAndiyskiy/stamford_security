@@ -48,11 +48,11 @@ export default function Footer() {
   }, [mapVisible])
 
   return (
-    <footer id="contacts" className="relative overflow-hidden bg-[#0E151D] text-[#EEEDEB]">
+    <footer id="contact" className="relative scroll-mt-24 overflow-hidden bg-[#0E151D] text-[#EEEDEB]">
       <div
         className="pointer-events-none absolute inset-0 opacity-10"
         style={{
-          backgroundImage: "url('/Stamford Security logos-21.svg')",
+          backgroundImage: "url('/Favicon.svg')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '35% 60%',
           backgroundSize: '70%',

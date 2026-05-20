@@ -144,6 +144,18 @@
     animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
+  .button:focus-visible,
+  .button2:focus-visible,
+  .menu-link:focus-visible,
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #0E151D;
+    outline-offset: 3px;
+  }
+
   .button2--light::after {
     background-color: #EEEDEB;
   }

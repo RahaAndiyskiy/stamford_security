@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, type KeyboardEvent } from 'react'
 import { Container } from '@/components/ui/Container'
 
 const articles = [
@@ -95,6 +95,13 @@ export default function BlogsSection() {
 
   const selectedArticle = articles.find((article) => article.id === selectedArticleId) ?? articles[0]
 
+  const handleArticleKeyDown = (event: KeyboardEvent<HTMLElement>, id: string) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      setSelectedArticleId(id)
+    }
+  }
+
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(window.location.href)
@@ -181,7 +188,10 @@ export default function BlogsSection() {
               <article
                 key={article.id}
                 role="button"
+                tabIndex={0}
+                aria-pressed={selectedArticle.id === article.id}
                 onClick={() => setSelectedArticleId(article.id)}
+                onKeyDown={(event) => handleArticleKeyDown(event, article.id)}
                 className={`group cursor-pointer flex h-full flex-col justify-between rounded-md border border-[#0E151D]/10 bg-[#F7F7FF] p-0 text-left transition duration-300 hover:shadow-[0_12px_30px_rgba(14,21,29,0.08)] ${
                   selectedArticle.id === article.id ? 'border-[#0E151D] shadow-[0_16px_45px_rgba(14,21,29,0.14)] opacity-100' : 'opacity-50'
                 } ${index % 3 === 1 ? 'lg:mt-10' : ''} ${index % 3 === 1 ? 'lg:animate-float-down' : 'lg:animate-float-up'}`}
