@@ -135,7 +135,7 @@ export default function ServicesStrip() {
           })}
         </ul>
 
-        <Button2 href="#industries" className="button2--light text-sm tracking-[0.35em] transition text-[#EEEDEB] hover:text-[#FFFFFF]">
+        <Button2 href="/services" className="button2--light text-sm tracking-[0.35em] transition text-[#EEEDEB] hover:text-[#FFFFFF]">
           View all services
         </Button2>
       </Container>

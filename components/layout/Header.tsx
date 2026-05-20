@@ -53,7 +53,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-0">
           <a
             href="https://wa.me/441344951005"
             target="_blank"
