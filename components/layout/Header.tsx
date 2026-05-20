@@ -22,6 +22,7 @@ function FacebookIcon({ className }: { className?: string }) {
 const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/#about' },
+  { label: 'Blogs', href: '/blogs' },
   { label: 'Services', href: '/#industries' },
   { label: 'Contact', href: '/request' },
 ]
