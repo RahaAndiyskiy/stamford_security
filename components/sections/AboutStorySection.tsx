@@ -93,13 +93,16 @@ export default function AboutStorySection() {
   })()
 
   const missionStyles = (() => {
+    const startY = isMobile ? 420 : 280
+    const endY = isMobile ? -140 : -100
+
     if (progress <= 0.75) {
-      return { transform: 'translateY(280px)', opacity: 0 }
+      return { transform: `translateY(${startY}px)`, opacity: 0 }
     }
 
     const phase = (progress - 0.75) / 0.25
     return {
-      transform: `translateY(${ 280 * (1 - phase) - 100 * phase }px)`,
+      transform: `translateY(${startY * (1 - phase) + endY * phase}px)`,
       opacity: phase,
     }
   })()

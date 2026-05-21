@@ -8,7 +8,7 @@ import SmoothScrollProvider from '@/components/SmoothScrollProvider'
 export default function AboutPage() {
   return (
     <SmoothScrollProvider>
-      <div className="min-h-screen bg-[#EEEDEB] text-[#0E151D]">
+      <div className="about-page min-h-screen bg-[#EEEDEB] text-[#0E151D]">
         <Header />
         <AboutStorySection />
         <Footer />

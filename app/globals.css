@@ -40,6 +40,13 @@
     padding-left: clamp(1.5rem, 3vw, 2rem);
     padding-right: clamp(1.5rem, 3vw, 2rem);
   }
+
+  @media (max-width: 640px) {
+    .about-page .page-container {
+      padding-bottom: 20px;
+    }
+  }
+
   .menu-link {
     position: relative;
     display: inline-flex;
