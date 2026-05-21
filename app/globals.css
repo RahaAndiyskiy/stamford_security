@@ -586,7 +586,6 @@
   .button__text {
     display: inline-flex;
     align-items: center;
-    transition: transform 300ms ease;
   }
 
   .button__arrow-shell {
@@ -603,7 +602,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: transform 300ms ease, opacity 300ms ease;
   }
 
   .button__arrow--base {
@@ -617,6 +615,11 @@
   }
 
   @media (hover: hover) {
+    .button__text,
+    .button__arrow {
+      transition: transform 300ms ease, opacity 300ms ease;
+    }
+
     .button:hover .button__text {
       transform: translateX(8px);
     }
@@ -632,7 +635,24 @@
     }
   }
 
-  @media (hover: none), (pointer: coarse) {
+  @media (hover: none), (pointer: coarse), (any-hover: none), (any-pointer: coarse) {
+    .button,
+    .button2,
+    .button *,
+    .button2 *,
+    .button__text,
+    .button__arrow-shell,
+    .button__arrow,
+    .button__arrow--base,
+    .button__arrow--clone,
+    .button2 span,
+    .button2::after {
+      transition: none !important;
+      animation: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+
     .button:hover,
     .button:active,
     .button:focus,
@@ -641,8 +661,8 @@
     .button2:active,
     .button2:focus,
     .button2:focus-visible {
-      background: transparent !important;
-      color: inherit !important;
+      background: #0f172a !important;
+      color: #ffffff !important;
       transform: none !important;
       animation: none !important;
       opacity: 1 !important;
