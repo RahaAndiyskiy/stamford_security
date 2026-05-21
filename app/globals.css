@@ -212,6 +212,35 @@
     }
   }
 
+  @media (max-width: 1023px) {
+    .button,
+    .button *,
+    .button .button__text,
+    .button .button__arrow--base,
+    .button .button__arrow--clone {
+      transition: none !important;
+      animation: none !important;
+    }
+
+    .button:hover,
+    .button:active,
+    .button:focus,
+    .button:focus-visible {
+      background: transparent !important;
+      color: inherit !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+
+    .button:hover .button__text,
+    .button:hover .button__arrow--base,
+    .button:hover .button__arrow--clone {
+      transform: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+    }
+  }
+
   .button:focus-visible,
   .button2:focus-visible,
   .menu-link:focus-visible,
