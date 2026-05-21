@@ -58,6 +58,15 @@ const nextConfig = {
       },
     ]
   },
+  distDir: process.env.NODE_ENV === 'development' ? '.next-dev' : '.next',
+  webpack(config, { dev }) {
+    if (dev) {
+      config.cache = {
+        type: 'memory',
+      }
+    }
+    return config
+  },
 }
 
 export default nextConfig

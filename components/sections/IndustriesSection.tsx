@@ -16,21 +16,22 @@ export default function IndustriesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
-    <section id="industries" className="relative scroll-mt-24 h-screen w-full overflow-hidden bg-[#EEEDEB] text-[#0E151D]">
+    <section id="industries" className="relative scroll-mt-24 w-full overflow-hidden bg-[#EEEDEB] text-[#0E151D] lg:h-screen lg:pb-0 pb-24">
       <span id="services" className="absolute inset-x-0 top-0 h-0" />
-      <Container className="grid h-full gap-10 pt-24 lg:grid-cols-[minmax(30rem,1fr)_minmax(32rem,1fr)] lg:pt-28">
-        <div className="w-full max-w-xl lg:max-w-[36rem]">
+      <Container className="grid h-full gap-10 pt-24 lg:grid-cols-[minmax(30rem,1fr)_minmax(32rem,1fr)] lg:pt-28 !px-5">
+        <div className="w-full max-w-xl lg:max-w-[36rem] mx-auto px-0 lg:mx-0 lg:px-0">
           <div className="relative overflow-hidden">
-            <div
-              className="pointer-events-none absolute inset-0 z-0 opacity-5"
-              style={{
-                backgroundImage: "url('/Stamford Security logos-24.svg')",
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center 50%',
-                backgroundSize: '120%',
-              }}
-            />
-            <div className="relative z-10">
+            <div className="relative overflow-hidden max-w-xl mx-auto lg:mx-0">
+              <div
+                className="pointer-events-none absolute inset-0 z-0 opacity-5"
+                style={{
+                  backgroundImage: "url('/Stamford Security logos-24.svg')",
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center 50%',
+                  backgroundSize: '120%',
+                }}
+              />
+              <div className="relative z-10">
               <span className="text-[11px] uppercase tracking-[0.35em] text-[#0E151D]/80">
                 INDUSTRIES WE SERVE
               </span>
@@ -55,20 +56,43 @@ export default function IndustriesSection() {
               <p className="mt-8 max-w-lg text-[18px] leading-5 text-[#7F7F7F]">
                 We deliver tailored security solutions designed to protect people, assets and operations across corporate, construction, executive and high-risk environments.
               </p>
-              <div className="mt-20 flex flex-wrap items-center gap-4">
-                <Button href="/services" className="h-[50px] min-w-[200px] sm:w-[250px] text-[12px]">
+              <div className="mt-20 flex flex-col items-center gap-4 sm:flex-row sm:items-center">
+                <Button
+                  href="/services"
+                  className="h-[60px] w-full sm:w-auto sm:min-w-[220px] sm:w-[240px] text-[16px] lg:h-[50px] lg:min-w-[200px] lg:w-[250px] lg:text-[12px]"
+                >
                   MORE SERVICES
                 </Button>
-                <Button2 href="/request" className="h-[50px] min-w-[200px] sm:w-[250px] text-[14px]">
+                <Button2
+                  href="/request"
+                  className="h-[60px] w-full sm:w-auto sm:min-w-[220px] sm:w-[240px] justify-center text-sm tracking-[0.3em] transition hover:text-[#0E151D] lg:h-[50px] lg:min-w-[200px] lg:w-[250px] lg:text-[14px]"
+                >
                   CONSULTATION
                 </Button2>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+        <div className="lg:hidden relative w-full max-w-[24rem] mx-auto overflow-visible industries-gallery mt-10" onMouseLeave={() => setActiveIndex(null)}>
+          {industryImages.map((item, index) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={item.src}
+              src={item.src}
+              alt={item.label}
+              loading="lazy"
+              decoding="async"
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+              className={`industries-gallery-img ${activeIndex === index ? 'active' : ''}`}
+            />
+          ))}
+        </div>
 
         <div
-          className="relative max-h-[34rem] overflow-visible self-center -mt-16 industries-gallery"
+          className="hidden lg:block relative max-h-[34rem] overflow-visible self-center -mt-16 industries-gallery"
           onMouseLeave={() => setActiveIndex(null)}
         >
           {industryImages.map((item, index) => (

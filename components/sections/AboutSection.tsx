@@ -7,7 +7,7 @@ import ServicesStrip from '@/components/sections/ServicesStrip'
 export default function AboutSection() {
   return (
     <section id="about" className="relative w-full overflow-visible lg:overflow-hidden bg-[#E9E8E4] text-[#0E151D] lg:h-screen">
-      <Container className="relative z-10 h-auto lg:h-full px-0">
+      <Container className="relative z-10 h-auto lg:h-full px-4 lg:px-0">
         <div className="lg:hidden relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-visible">
           <div className="h-[55vh] w-full overflow-visible">
             <img
@@ -29,7 +29,7 @@ export default function AboutSection() {
             />
           </div>
 
-          <div className="order-last flex h-full flex-col justify-center gap-5 bg-[#E9E8E4] px-4 pt-10 lg:px-0 lg:order-none">
+          <div className="order-last flex h-full flex-col justify-center gap-5 bg-[#E9E8E4] px-0 pt-10 lg:px-0 lg:order-none">
             <div className="relative overflow-hidden max-w-xl mx-auto lg:mx-0">
               <div
                 className="pointer-events-none absolute inset-0 z-0 opacity-5"
