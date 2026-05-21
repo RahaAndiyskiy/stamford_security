@@ -157,7 +157,13 @@
     animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  @media (hover: none) and (pointer: coarse) {
+  @media (hover: none) {
+    .button:hover,
+    .button2:hover {
+      color: inherit !important;
+      background-color: transparent !important;
+    }
+
     .button:hover .button__text,
     .button:hover .button__arrow--base,
     .button:hover .button__arrow--clone,
@@ -166,6 +172,10 @@
       transform: none !important;
       animation: none !important;
       opacity: 1 !important;
+    }
+
+    .button2:hover::after {
+      transform: scaleX(1) !important;
     }
   }
 
