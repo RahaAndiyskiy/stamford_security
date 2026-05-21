@@ -118,6 +118,15 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  .button {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .button * {
+    pointer-events: none;
+  }
+
   .button2 {
     position: relative;
     display: inline-flex;
@@ -566,6 +575,37 @@
   .button:hover .button__arrow--clone {
     transform: translate(0, 0);
     opacity: 1;
+  }
+
+  @media (hover: none) {
+    .button:hover,
+    .button:active,
+    .button:focus,
+    .button:focus-visible,
+    .button2:hover,
+    .button2:active,
+    .button2:focus,
+    .button2:focus-visible {
+      background: transparent !important;
+      color: inherit !important;
+      transform: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+    }
+
+    .button:hover .button__text,
+    .button:hover .button__arrow--base,
+    .button:hover .button__arrow--clone,
+    .button2:hover span,
+    .button2:hover::after {
+      transform: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+    }
+
+    .button2:hover::after {
+      transform: scaleX(1) !important;
+    }
   }
 
   .menu-link:hover .menu-link__text {
