@@ -68,7 +68,7 @@ export default function Header() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className="inline-flex h-[50px] w-[50px] items-center justify-center rounded-sm bg-slate-950 text-[10px] font-medium uppercase tracking-[0.20em] text-white transition duration-200 hover:bg-slate-900 lg:hidden"
           >
-            {mobileOpen ? '×' : '☰'}
+            {mobileOpen ? 'X' : 'Menu'}
           </button>
 
           <div className="hidden lg:flex items-center gap-0">
@@ -107,7 +107,7 @@ export default function Header() {
       </Container>
 
       <div
-        className={`overflow-hidden bg-[#F6F5F3] p-0 shadow-2xl shadow-black/20 transition-[max-height,opacity] duration-200 ease-out lg:hidden ${
+        className={`overflow-hidden bg-[#F6F5F3] p-1 shadow-2xl shadow-black/20 transition-[max-height,opacity] duration-200 ease-out lg:hidden ${
           mobileOpen
             ? 'max-h-[calc(100vh-4.375rem)] opacity-100 pointer-events-auto'
             : 'max-h-0 opacity-0 pointer-events-none'

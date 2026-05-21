@@ -14,8 +14,8 @@ export default function HeroSection() {
   const heroImageClass = HERO_ANIMATIONS_ENABLED ? 'hero-image-animate' : ''
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden bg-[#E9E8E4]">
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65vw]">
+    <section id="home" className="relative w-full overflow-hidden bg-[#E9E8E4] lg:h-screen">
+      <div className="pointer-events-none hidden lg:block absolute inset-y-0 right-0 w-full lg:w-[65vw]">
         <div className={`relative h-full w-full ${heroImageClass}`}>
           <Image
             src="/HERO_NEW.webp"
@@ -27,14 +27,14 @@ export default function HeroSection() {
         </div>
       </div>
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65vw]"
+        className="pointer-events-none hidden lg:block absolute inset-y-0 right-0 w-full lg:w-[65vw]"
         style={{
           background: 'linear-gradient(90deg, #E9E8E4 0%, rgba(233,232,228,0.95) 15%, rgba(233,232,228,0.3) 25%, rgba(0, 0, 0, 0.4)  85%)',
         }}
       />
 
-      <Container className="relative z-10 h-[calc(100%-160px)]">
-        <div className="h-full w-full pt-24 pb-24 lg:pt-28 lg:w-[35vw] bg-[#E9E8E4]">
+      <Container className="relative z-10 h-auto lg:h-[calc(100%-160px)]">
+        <div className="h-full w-full pt-20 pb-20 lg:pt-28 lg:w-[35vw] bg-[#E9E8E4]">
           <div className="flex h-full flex-col justify-between gap-6">
             <div className="max-w-xl lg:max-w-[36rem]">
               <span className={`${heroTextClass} text-xs uppercase tracking-[0.25em] text-[#6B6B6B]/80`}>Stamford Security</span>
@@ -49,16 +49,32 @@ export default function HeroSection() {
               </p>
             </div>
             <div className={`flex flex-wrap items-center gap-4 ${heroActionsClass}`}>
-              <Button href="/request" className="h-[60px] min-w-[220px] sm:w-[240px] text-[16px]">
+              <Button
+                href="/request"
+                className="h-[60px] w-full sm:w-auto sm:min-w-[220px] sm:w-[240px] text-[16px] lg:h-[60px] lg:min-w-[220px] lg:w-[240px]"
+              >
                 Let&apos;s talk
               </Button>
-              <Button2 href="#about" className="text-sm tracking-[0.3em] transition hover:text-[#0E151D]">
+              <Button2
+                href="#about"
+                className="h-[60px] w-full sm:w-auto sm:min-w-[220px] sm:w-[240px] justify-center text-sm tracking-[0.3em] transition hover:text-[#0E151D] lg:h-auto lg:w-auto lg:min-w-0"
+              >
                 About Us
               </Button2>
             </div>
           </div>
         </div>
       </Container>
+
+      <div className={`lg:hidden relative h-[45vh] w-full overflow-hidden ${heroImageClass}`}>
+        <Image
+          src="/HERO_NEW.webp"
+          alt="Hero background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
 
       <div className="w-full text-[#0E151D]">
         <Container className="grid h-[160px] items-center px-0">
@@ -90,10 +106,10 @@ export default function HeroSection() {
               },
             ].map((item, index) => (
               <div key={item.title} className="group flex h-full">
-                <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-b-none bg-[#0E151D]/95 backdrop-blur-sm px-4 text-center [perspective:1000px]">
-                  <div className="relative h-full w-full transition-all duration-500 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-hover: group-hover:-translate-y-1">
-                    <div className="absolute inset-0 flex flex-col justify-center gap-2" style={{ backfaceVisibility: 'hidden' }}>
-                      <span className="text-2xl font-medium tracking-tight text-[#EEEDEB] sm:text-4xl">
+                <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-b-none bg-[#0E151D]/95 backdrop-blur-sm px-3 text-center lg:px-4 [perspective:1000px]">
+                  <div className="relative h-full w-full transition-all duration-500 ease-out lg:[transform-style:preserve-3d] lg:group-hover:[transform:rotateY(180deg)] lg:group-hover:-translate-y-1">
+                    <div className="absolute inset-0 flex flex-col justify-center gap-0 lg:gap-3" style={{ backfaceVisibility: 'hidden' }}>
+                      <span className="text-xl font-medium tracking-tight text-[#EEEDEB] lg:text-4xl">
                         <span
                           className="counter inline-block"
                           style={{
@@ -103,12 +119,12 @@ export default function HeroSection() {
                         />
                         <span aria-hidden="true">{item.suffix}</span>
                       </span>
-                      <span className="text-[16px] uppercase tracking-[0.35em] text-[#EEEDEB]/90">
+                      <span className="text-[12px] uppercase tracking-[0.35em] text-[#EEEDEB]/90 lg:text-[16px]">
                         {item.title}
                       </span>
                     </div>
-                    <div className="absolute inset-0 flex h-full flex-col justify-center gap-3 px-4 text-center text-[#EEEDEB]/80 [transform:rotateY(180deg)]" style={{ backfaceVisibility: 'hidden' }}>
-                      <p className="mx-auto max-w-[280px] text-[18px] leading-4 text-[#EEEDEB]/80">
+                    <div className="absolute inset-0 flex h-full flex-col justify-center gap-1 px-2 text-center text-[#EEEDEB]/80 lg:gap-3 lg:px-4 [transform:rotateY(180deg)]" style={{ backfaceVisibility: 'hidden' }}>
+                      <p className="mx-auto max-w-full text-xs leading-4 text-[#EEEDEB]/80 lg:max-w-[280px] lg:text-[18px]">
                         {item.description}
                       </p>
                     </div>
