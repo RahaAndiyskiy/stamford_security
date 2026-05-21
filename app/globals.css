@@ -112,6 +112,12 @@
     }
   }
 
+  .button,
+  .button2 {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .button2 {
     position: relative;
     display: inline-flex;
@@ -149,6 +155,18 @@
 
   .button2:hover::after {
     animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .button:hover .button__text,
+    .button:hover .button__arrow--base,
+    .button:hover .button__arrow--clone,
+    .button2:hover span,
+    .button2:hover::after {
+      transform: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+    }
   }
 
   .button:focus-visible,

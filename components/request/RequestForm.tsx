@@ -67,7 +67,7 @@ export default function RequestForm() {
               name="name"
               placeholder=" "
               required
-              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
+              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-base sm:text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
             />
             <span className="pointer-events-none absolute left-0 top-0 text-sm text-[#0E151D]/50 transition-all duration-200 ease-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#0E151D]">
               Full name <span className="text-[#0E151D]">*</span>
@@ -79,7 +79,7 @@ export default function RequestForm() {
               name="email"
               placeholder=" "
               required
-              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
+              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-base sm:text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
             />
             <span className="pointer-events-none absolute left-0 top-0 text-sm text-[#0E151D]/50 transition-all duration-200 ease-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#0E151D]">
               Email address <span className="text-[#0E151D]">*</span>
@@ -92,7 +92,7 @@ export default function RequestForm() {
               type="tel"
               name="phone"
               placeholder=" "
-              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
+              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-base sm:text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
             />
             <span className="pointer-events-none absolute left-0 top-0 text-sm text-[#0E151D]/50 transition-all duration-200 ease-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#0E151D]">
               Phone
@@ -103,7 +103,7 @@ export default function RequestForm() {
               type="text"
               name="company"
               placeholder=" "
-              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
+              className="peer w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-base sm:text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
             />
             <span className="pointer-events-none absolute left-0 top-0 text-sm text-[#0E151D]/50 transition-all duration-200 ease-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#0E151D]">
               Company or project
@@ -115,7 +115,7 @@ export default function RequestForm() {
           <select
             name="service"
             defaultValue=""
-            className="h-14 w-full border-b border-[#0E151D]/20 bg-transparent px-0 text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
+            className="h-14 w-full border-b border-[#0E151D]/20 bg-transparent px-0 text-base sm:text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
           >
             <option value="" disabled>
               Select a service
@@ -134,7 +134,7 @@ export default function RequestForm() {
             name="message"
             rows={5}
             placeholder=" "
-            className="peer min-h-[140px] w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
+            className="peer min-h-[140px] w-full border-b border-[#0E151D]/20 bg-transparent px-0 pb-1 pt-5 text-base sm:text-sm text-[#0E151D] outline-none transition-colors duration-200 ease-out focus:border-[#0E151D]/20 focus:ring-0"
           />
           <span className="pointer-events-none absolute left-0 top-0 text-sm text-[#0E151D]/50 transition-all duration-200 ease-out peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#0E151D]">
             Message
