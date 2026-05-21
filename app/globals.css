@@ -331,7 +331,7 @@
   .industries-gallery {
     --s: 450px;
     --g: 10px;
-    --f: 1.25;
+    --f: 1.5;
     display: grid;
     gap: var(--g);
     width: calc(2*var(--s) + var(--g));
