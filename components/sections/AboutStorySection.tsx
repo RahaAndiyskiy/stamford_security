@@ -7,14 +7,17 @@ export default function AboutStorySection() {
   const sectionRef = useRef<HTMLElement | null>(null)
   const rafRef = useRef<number | null>(null)
   const [progress, setProgress] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const section = sectionRef.current
     if (!section) return
 
+    const mediaQuery = window.matchMedia('(max-width: 1023px)')
+    const updateMobile = () => setIsMobile(mediaQuery.matches)
+
     const updateProgress = () => {
       const headerOffset = 70
-      const sectionTop = section.offsetTop - headerOffset
       const scrollable = section.offsetHeight - window.innerHeight
       const rawProgress = window.scrollY / scrollable
       const clamped = Math.min(1, Math.max(0, rawProgress))
@@ -29,11 +32,14 @@ export default function AboutStorySection() {
       })
     }
 
+    updateMobile()
     updateProgress()
+    window.addEventListener('resize', updateMobile)
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('resize', handleScroll)
 
     return () => {
+      window.removeEventListener('resize', updateMobile)
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleScroll)
       if (rafRef.current !== null) window.cancelAnimationFrame(rafRef.current)
@@ -41,30 +47,34 @@ export default function AboutStorySection() {
   }, [])
 
   const leftStyles = (() => {
+    const fadeMultiplier = isMobile ? 1.4 : 1
+
     if (progress <= 0.35) {
       const phase = progress / 0.35
       return {
         transform: `translateY(${ -320 * phase }px)`,
-        opacity: 1 - 0.75 * phase,
+        opacity: Math.max(0.05, 1 - 0.85 * phase * fadeMultiplier),
       }
     }
 
     return {
       transform: 'translateY(-320px)',
-      opacity: 0.25,
+      opacity: isMobile ? 0.05 : 0.25,
     }
   })()
 
   const rightStyles = (() => {
+    const fadeMultiplier = isMobile ? 1.4 : 1
+
     if (progress <= 0.2) {
-      return { transform: 'translateY(180px)', opacity: 0.15 }
+      return { transform: 'translateY(180px)', opacity: isMobile ? 0.05 : 0.15 }
     }
 
     if (progress <= 0.45) {
       const phase = (progress - 0.2) / 0.25
       return {
         transform: `translateY(${ 180 * (1 - phase) }px)`,
-        opacity: 0.15 + 0.85 * phase,
+        opacity: Math.min(1, (isMobile ? 0.05 : 0.15) + 0.85 * phase * fadeMultiplier),
       }
     }
 
@@ -72,24 +82,24 @@ export default function AboutStorySection() {
       const phase = (progress - 0.45) / 0.3
       return {
         transform: `translateY(${ -220 * phase }px)`,
-        opacity: 1 - 0.65 * phase,
+        opacity: Math.max(0.05, 1 - 0.75 * phase * fadeMultiplier),
       }
     }
 
     return {
       transform: 'translateY(-220px)',
-      opacity: 0.35,
+      opacity: isMobile ? 0.05 : 0.35,
     }
   })()
 
   const missionStyles = (() => {
     if (progress <= 0.75) {
-      return { transform: 'translateY(220px)', opacity: 0 }
+      return { transform: 'translateY(280px)', opacity: 0 }
     }
 
     const phase = (progress - 0.75) / 0.25
     return {
-      transform: `translateY(${ 220 * (1 - phase) }px)`,
+      transform: `translateY(${ 280 * (1 - phase) - 100 * phase }px)`,
       opacity: phase,
     }
   })()

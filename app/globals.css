@@ -201,6 +201,12 @@
     z-index: 0;
   }
 
+  @media (max-width: 1023px) {
+    .about-bg-number {
+      font-size: clamp(9rem, 14vw, 16rem);
+    }
+  }
+
   .about-panel-left,
   .about-panel-right,
   .about-panel-mission {

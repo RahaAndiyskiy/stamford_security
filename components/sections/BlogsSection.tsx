@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, type KeyboardEvent } from 'react'
+import { useRef, useState, type KeyboardEvent } from 'react'
 import { Container } from '@/components/ui/Container'
 
 const articles = [
@@ -90,15 +90,24 @@ const articles = [
 ]
 
 export default function BlogsSection() {
+  const articleRef = useRef<HTMLDivElement | null>(null)
   const [selectedArticleId, setSelectedArticleId] = useState(articles[0].id)
   const [showShareActions, setShowShareActions] = useState(false)
 
   const selectedArticle = articles.find((article) => article.id === selectedArticleId) ?? articles[0]
 
+  const scrollToArticleOnMobile = () => {
+    if (typeof window === 'undefined') return
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+      articleRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const handleArticleKeyDown = (event: KeyboardEvent<HTMLElement>, id: string) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault()
       setSelectedArticleId(id)
+      scrollToArticleOnMobile()
     }
   }
 
@@ -130,7 +139,7 @@ export default function BlogsSection() {
     <section className="flex-1 bg-[#EEEDEB] text-[#0E151D]">
       <Container className="flex min-h-[calc(115vh-70px)] flex-col pt-16 pb-8 lg:pt-20 lg:pb-10">
         <div className="grid flex-1 gap-6 lg:grid-cols-[1.3fr_1.5fr] lg:items-start">
-          <article className="self-center rounded-md border border-[#0E151D]/15 bg-[#F6F5F3] p-7 shadow-sm shadow-black/5">
+          <article ref={articleRef} className="self-center rounded-md border border-[#0E151D]/15 bg-[#F6F5F3] p-2.5 shadow-sm shadow-black/5">
             <div className="space-y-6 text-[#0E151D]">
               <div className="flex flex-col gap-3">
                 <span className="inline-block rounded-sm bg-[#0E151D] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#EEEDEB]">
@@ -190,7 +199,10 @@ export default function BlogsSection() {
                 role="button"
                 tabIndex={0}
                 aria-pressed={selectedArticle.id === article.id}
-                onClick={() => setSelectedArticleId(article.id)}
+                onClick={() => {
+                  setSelectedArticleId(article.id)
+                  scrollToArticleOnMobile()
+                }}
                 onKeyDown={(event) => handleArticleKeyDown(event, article.id)}
                 className={`group cursor-pointer flex h-full flex-col justify-between rounded-md border border-[#0E151D]/10 bg-[#F7F7FF] p-0 text-left transition duration-300 hover:shadow-[0_12px_30px_rgba(14,21,29,0.08)] ${
                   selectedArticle.id === article.id ? 'border-[#0E151D] shadow-[0_16px_45px_rgba(14,21,29,0.14)] opacity-100' : 'opacity-50'
@@ -203,7 +215,7 @@ export default function BlogsSection() {
                     <h2 className="mt-1 text-base font-semibold leading-snug">{article.title}</h2>
                   </div>
                 </div>
-                <div className="px-4 pb-2 pt-0 -mt-1 text-sm leading-5 text-[#4C4C4C]">{article.excerpt}</div>
+                <div className="p-2.5 lg:px-4 lg:pb-2 lg:pt-0 -mt-1 text-sm leading-5 text-[#4C4C4C]">{article.excerpt}</div>
               </article>
             ))}
           </aside>
