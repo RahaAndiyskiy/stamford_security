@@ -145,8 +145,14 @@
     transition: transform 0.25s ease;
   }
 
-  .button2:hover span {
-    transform: scale(1.05);
+  @media (hover: hover) {
+    .button2:hover span {
+      transform: scale(1.05);
+    }
+
+    .button2:hover::after {
+      animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
   }
 
   .button2::after {
@@ -162,15 +168,33 @@
     transition: transform 0.5s ease;
   }
 
-  .button2:hover::after {
-    animation: button2-underline 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
+  @media (hover: none), (pointer: coarse) {
+    .button,
+    .button2,
+    .button *,
+    .button2 *,
+    .button .button__text,
+    .button .button__arrow--base,
+    .button .button__arrow--clone,
+    .button2 span,
+    .button2::after {
+      transition: none !important;
+      animation: none !important;
+    }
 
-  @media (hover: none) {
     .button:hover,
-    .button2:hover {
+    .button:active,
+    .button:focus,
+    .button:focus-visible,
+    .button2:hover,
+    .button2:active,
+    .button2:focus,
+    .button2:focus-visible {
+      background: transparent !important;
       color: inherit !important;
-      background-color: transparent !important;
+      transform: none !important;
+      animation: none !important;
+      opacity: 1 !important;
     }
 
     .button:hover .button__text,
@@ -563,21 +587,23 @@
     opacity: 0;
   }
 
-  .button:hover .button__text {
-    transform: translateX(8px);
+  @media (hover: hover) {
+    .button:hover .button__text {
+      transform: translateX(8px);
+    }
+
+    .button:hover .button__arrow--base {
+      transform: translate(140%, -140%);
+      opacity: 0;
+    }
+
+    .button:hover .button__arrow--clone {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
   }
 
-  .button:hover .button__arrow--base {
-    transform: translate(140%, -140%);
-    opacity: 0;
-  }
-
-  .button:hover .button__arrow--clone {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-
-  @media (hover: none) {
+  @media (hover: none), (pointer: coarse) {
     .button:hover,
     .button:active,
     .button:focus,
