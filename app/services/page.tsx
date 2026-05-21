@@ -72,8 +72,8 @@ export default function ServicesPage() {
       <div className="min-h-screen bg-[#EEEDEB] text-[#0E151D]">
         <Header />
 
-        <main className="w-full px-6 py-28 sm:px-8">
-          <Container>
+        <main className="w-full px-0 py-28">
+          <Container className="!px-5">
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-[0.35em] text-[#0E151D]/70">Services</p>
               <h1 className="mt-4 text-5xl font-semibold leading-[1.05] text-[#0E151D] sm:text-6xl">
@@ -89,7 +89,7 @@ export default function ServicesPage() {
             {services.map((service, index) => {
               const isOdd = index % 2 === 0
               return (
-                <Container key={service.title} className="overflow-hidden">
+                <Container key={service.title} className="overflow-hidden !px-5">
                   <div className={`grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] ${isOdd ? '' : 'lg:grid-cols-[1fr_1.2fr]'} `}>
                     <div className={`${isOdd ? '' : 'lg:order-2'} rounded-md overflow-hidden bg-white shadow-[0_35px_90px_-50px_rgba(14,21,29,0.22)]`}>
                       <Image
