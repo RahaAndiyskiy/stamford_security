@@ -33,7 +33,7 @@ export default function RequestPage() {
 
             <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-start">
               <div className="order-2 lg:order-1">
-                <div className="rounded-md grid gap-7 border border-[#0E151D]/15 bg-[#F6F5F3] p-7 text-[#0E151D] shadow-sm shadow-black/5">
+                <div className="rounded-md grid gap-7 border border-[#0E151D]/15 bg-[#F6F5F3] p-7 px-3.5 sm:px-7 text-[#0E151D] shadow-sm shadow-black/5">
                   <div className="space-y-6">
                     <p className="text-sm uppercase tracking-[0.35em] text-[#0E151D]/70">WHY STAMFORD</p>
                     <div className="space-y-2 text-[#0E151D]/85 text-sm leading-4">
@@ -62,7 +62,7 @@ export default function RequestPage() {
                   </div>
 
                   <div className="border-t border-[#0E151D]/10 pt-3 text-sm leading-5 text-[#0E151D]/85">
-                    <div className="flex flex-wrap justify-between gap-8">
+                    <div className="flex flex-wrap justify-between gap-4 lg:gap-8">
                       <div className="min-w-[45%]">
                         <p className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-xs">OFFICE</p>
                         <div className="mt-3 grid gap-1 text-sm text-[#0E151D]/85">
@@ -111,7 +111,7 @@ export default function RequestPage() {
                 </div>
               </div>
 
-              <div className="order-1 lg:order-2">
+              <div className="order-1 lg:order-2 lg:-mt-48">
                 <RequestForm />
               </div>
             </div>

@@ -53,7 +53,7 @@ export default function RequestForm() {
   }
 
   return (
-    <div className="rounded-md border border-[#0E151D]/15 bg-[#F7F7FF] p-8 shadow-[0_30px_80px_-35px_rgba(14,21,29,0.08)] transition duration-700 ease-out will-change-transform focus-within:shadow-[0_35px_110px_-25px_rgba(14,21,29,1)] focus-within:animate-form-sway">
+    <div className="rounded-md border border-[#0E151D]/15 bg-[#F7F7FF] p-8 px-4 sm:px-8 shadow-[0_30px_80px_-35px_rgba(14,21,29,0.08)] transition duration-700 ease-out will-change-transform focus-within:shadow-[0_35px_110px_-25px_rgba(14,21,29,1)] focus-within:animate-form-sway">
       <div className="mb-8 text-center">
         <span className="text-sm uppercase tracking-[0.35em] text-[#0E151D]/70">Let’s talk</span>
         <h2 className="mt-4 text-3xl font-semibold text-[#0E151D]">Request a callback</h2>
