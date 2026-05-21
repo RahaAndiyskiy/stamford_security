@@ -57,10 +57,16 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="mt-20 flex flex-col items-center gap-4 sm:flex-row sm:items-center">
-              <Button href="/about" className="h-[60px] w-full lg:h-[50px] lg:min-w-[200px] lg:w-[250px] text-[16px] lg:text-[12px]">
+              <Button
+                href="/about"
+                className="h-[60px] w-full sm:w-auto sm:min-w-[220px] sm:w-[240px] text-[16px] lg:h-[50px] lg:min-w-[200px] lg:w-[250px] lg:text-[12px]"
+              >
                 LEARN MORE ABOUT US
               </Button>
-              <Button2 href="/request" className="h-[60px] w-full lg:h-[50px] lg:min-w-[200px] lg:w-[250px] justify-center text-sm lg:text-[14px] tracking-[0.3em] transition hover:text-[#0E151D]">
+              <Button2
+                href="/request"
+                className="h-[60px] w-full sm:w-auto sm:min-w-[220px] sm:w-[240px] justify-center text-sm tracking-[0.3em] transition hover:text-[#0E151D] lg:h-[50px] lg:min-w-[200px] lg:w-[250px] lg:text-[14px]"
+              >
                 CONSULTATION
               </Button2>
             </div>

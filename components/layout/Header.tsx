@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from '@/components/ui/Container'
@@ -28,9 +31,11 @@ const navigation = [
 ]
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
   return (
     <header className="fixed top-0 left-0 z-[100] w-full bg-[#F6F5F3] shadow-sm shadow-black/5">
-      <Container className="grid min-h-[70px] grid-cols-[auto_1fr_auto] items-center gap-8">
+      <Container className="grid min-h-[60px] grid-cols-[auto_1fr_auto] items-center gap-0">
         <div className="flex items-center">
           <Link href="/" className="inline-flex items-center transition duration-200 hover:scale-95">
             <Image
@@ -43,7 +48,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav aria-label="Primary navigation" className="flex justify-center">
+        <nav aria-label="Primary navigation" className="hidden lg:flex justify-center">
           <ul className="flex items-center gap-8 text-[16px] uppercase tracking-[0.20em] text-[#0E151D]/80">
             {navigation.map((item) => (
               <li key={item.label}>
@@ -56,7 +61,72 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-0">
+        <div className="flex justify-end lg:justify-start">
+          <button
+            type="button"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="inline-flex h-[50px] w-[50px] items-center justify-center rounded-sm bg-slate-950 text-[10px] font-medium uppercase tracking-[0.20em] text-white transition duration-200 hover:bg-slate-900 lg:hidden"
+          >
+            {mobileOpen ? '×' : '☰'}
+          </button>
+
+          <div className="hidden lg:flex items-center gap-0">
+            <a
+              href="https://wa.me/441344951005"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Stamford Security on WhatsApp"
+              className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200"
+            >
+              <WhatsAppIcon className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
+            </a>
+            <a
+              href="https://x.com/stamfsecurity"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Stamford Security on X"
+              className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200"
+            >
+              <XIcon className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
+            </a>
+            <a
+              href="https://www.facebook.com/StamfordSafetyServices"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Stamford Security on Facebook"
+              className="group flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-200"
+            >
+              <FacebookIcon className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
+            </a>
+            <Button href="/request" className="h-[50px] w-[280px]">
+              Request a consultation
+            </Button>
+          </div>
+        </div>
+      </Container>
+
+      <div
+        className={`overflow-hidden bg-[#F6F5F3] p-0 shadow-2xl shadow-black/20 transition-[max-height,opacity] duration-200 ease-out lg:hidden ${
+          mobileOpen
+            ? 'max-h-[calc(100vh-4.375rem)] opacity-100 pointer-events-auto'
+            : 'max-h-0 opacity-0 pointer-events-none'
+        }`}
+      >
+        <nav aria-label="Mobile navigation" className="mt-2 space-y-4 pl-6">
+          {navigation.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              onClick={() => setMobileOpen(false)}
+              className="block border-b border-[#0E151D]/10 pb-4 text-[18px] uppercase tracking-[0.25em] text-[#0E151D]"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="mt-8 flex justify-center items-center gap-4">
           <a
             href="https://wa.me/441344951005"
             target="_blank"
@@ -84,11 +154,14 @@ export default function Header() {
           >
             <FacebookIcon className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
           </a>
-          <Button href="/request" className="h-[50px] w-[280px]">
+        </div>
+
+        <div className="mt-8">
+          <Button href="/request" className="h-[50px] w-full">
             Request a consultation
           </Button>
         </div>
-      </Container>
+      </div>
     </header>
   )
 }
