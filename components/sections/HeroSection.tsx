@@ -66,7 +66,7 @@ export default function HeroSection() {
         </div>
       </Container>
 
-      <div className={`lg:hidden relative h-[82.8vh] w-full overflow-hidden ${heroImageClass}`}>
+      <div className={`lg:hidden relative h-[75vh] w-full overflow-hidden ${heroImageClass}`}>
         <Image
           src="/HERO4mobile.webp"
           alt="Mobile hero background"
