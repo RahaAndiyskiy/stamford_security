@@ -34,7 +34,7 @@ export default function HeroSection() {
       />
 
       <Container className="relative z-10 h-auto lg:h-[calc(100%-160px)]">
-        <div className="h-full w-full pt-20 pb-20 lg:pt-28 lg:w-[35vw] bg-[#E9E8E4]">
+        <div className="hidden lg:block h-full w-full pt-20 pb-20 lg:pt-28 lg:w-[35vw] bg-[#E9E8E4]">
           <div className="flex h-full flex-col justify-between gap-6">
             <div className="max-w-xl lg:max-w-[36rem]">
               <span className={`${heroTextClass} text-xs uppercase tracking-[0.25em] text-[#6B6B6B]/80`}>Stamford Security Limited</span>
@@ -66,14 +66,30 @@ export default function HeroSection() {
         </div>
       </Container>
 
-      <div className={`lg:hidden relative h-[45vh] w-full overflow-hidden ${heroImageClass}`}>
+      <div className={`lg:hidden relative h-[82.8vh] w-full overflow-hidden ${heroImageClass}`}>
         <Image
-          src="/HERO_NEW.webp"
-          alt="Hero background"
+          src="/HERO4mobile.webp"
+          alt="Mobile hero background"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_0%] hero-mobile-zoom"
           priority
         />
+        <div className="absolute inset-x-0 bottom-0 px-6 pb-8">
+          <div className={`flex flex-col gap-3 ${heroActionsClass}`}>
+            <Button
+              href="/request"
+              className="h-[56px] w-full text-[16px]"
+            >
+              Let&apos;s talk
+            </Button>
+            <Button2
+              href="#about"
+              className="h-[56px] w-full justify-center text-sm tracking-[0.3em] text-[#EEEDEB] hover:text-[#EEEDEB] about-hero-button"
+            >
+              About Us
+            </Button2>
+          </div>
+        </div>
       </div>
 
       <div className="w-full text-[#0E151D]">
@@ -106,7 +122,7 @@ export default function HeroSection() {
               },
             ].map((item, index) => (
               <div key={item.title} className="group flex h-full">
-                <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-b-none bg-[#0E151D]/95 backdrop-blur-sm px-3 text-center lg:px-4 [perspective:1000px]">
+                <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-b-none bg-[#0E151D]/100 backdrop-blur-sm px-3 text-center lg:px-4 [perspective:1000px]">
                   <div className="relative h-full w-full transition-all duration-500 ease-out lg:[transform-style:preserve-3d] lg:group-hover:[transform:rotateY(180deg)] lg:group-hover:-translate-y-1">
                     <div className="absolute inset-0 flex flex-col justify-center gap-0 lg:gap-3" style={{ backfaceVisibility: 'hidden' }}>
                       <span className="text-xl font-medium tracking-tight text-[#EEEDEB] lg:text-4xl">

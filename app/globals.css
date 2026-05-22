@@ -112,6 +112,20 @@
     }
   }
 
+  .hero-mobile-zoom {
+    animation: hero-mobile-zoom 10s ease-in-out infinite;
+    transform-origin: center center;
+  }
+
+  @keyframes hero-mobile-zoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+  }
+
   .button,
   .button2 {
     touch-action: manipulation;
@@ -166,6 +180,10 @@
     transform-origin: right;
     transform: scaleX(1);
     transition: transform 0.5s ease;
+  }
+
+  .about-hero-button::after {
+    background-color: #EEEDEB;
   }
 
   @media (hover: none), (pointer: coarse) {
