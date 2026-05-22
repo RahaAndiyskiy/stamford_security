@@ -37,7 +37,7 @@ export default function HeroSection() {
         <div className="h-full w-full pt-20 pb-20 lg:pt-28 lg:w-[35vw] bg-[#E9E8E4]">
           <div className="flex h-full flex-col justify-between gap-6">
             <div className="max-w-xl lg:max-w-[36rem]">
-              <span className={`${heroTextClass} text-xs uppercase tracking-[0.25em] text-[#6B6B6B]/80`}>Stamford Security</span>
+              <span className={`${heroTextClass} text-xs uppercase tracking-[0.25em] text-[#6B6B6B]/80`}>Stamford Security Limited</span>
               <h1 className={`${heroHeadingClass} max-w-2xl text-5xl font-medium leading-[1.05] text-[#0E151D] sm:text-7xl`}>
                 Working for
                 <br />

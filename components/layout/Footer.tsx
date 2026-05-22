@@ -75,7 +75,9 @@ export default function Footer() {
               </div>
               <div className="space-y-3">
                 <p className="text-sm uppercase tracking-[0.2em] text-[#7F7F7F]">Phone</p>
-                <p className="text-base text-[#EEEDEB]">+44 1344 951005</p>
+                <a href="tel:+441344951005" className="text-base text-[#EEEDEB] hover:text-white">
+                  +44 1344 951005
+                </a>
                 <p className="text-sm text-[#7F7F7F]">For Quotation Only</p>
               </div>
             </div>

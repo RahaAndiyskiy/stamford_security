@@ -73,7 +73,9 @@ export default function RequestPage() {
                       </div>
                       <div className="min-w-[45%] text-right">
                         <p className="uppercase tracking-[0.35em] text-[#0E151D]/70 text-xs">CONTACT</p>
-                        <p className="mt-3 text-sm text-[#0E151D]/85">+44 1344 951005</p>
+                        <a href="tel:+441344951005" className="mt-3 block text-sm text-[#0E151D]/85 hover:text-[#0E151D]">
+                          +44 1344 951005
+                        </a>
                         <div className="mt-4 flex justify-end gap-3">
                           <a
                             href="https://wa.me/441344951005"
