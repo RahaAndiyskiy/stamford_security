@@ -1,10 +1,14 @@
-import type { ReactNode } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 
-interface ContainerProps {
+interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   className?: string
 }
 
-export function Container({ children, className = '' }: ContainerProps) {
-  return <div className={`page-container ${className}`}>{children}</div>
+export function Container({ children, className = '', ...props }: ContainerProps) {
+  return (
+    <div className={`page-container ${className}`} {...props}>
+      {children}
+    </div>
+  )
 }

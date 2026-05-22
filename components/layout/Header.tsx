@@ -26,7 +26,7 @@ const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/#about' },
   { label: 'Blogs', href: '/blogs' },
-  { label: 'Services', href: '/#services' },
+  { label: 'Services', href: '/services' },
   { label: 'Contact', href: '/#contact' },
 ]
 
